@@ -1,1 +1,43 @@
-<p>add-edit-modal works!</p>
+<div class="modal-container">
+  <div class="modal-title">
+    <h1>Warehouse Manager</h1>
+  </div>
+  <form
+    [formGroup]="signInForm"
+    class="sign-in-form"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="modal-input-container">
+      <mat-form-field>
+        <input
+          matInput
+          name="login"
+          formControlName="login"
+          placeholder="login"
+          type="text"
+        />
+      </mat-form-field>
+    </div>
+    <div class="modal-input-container">
+      <mat-form-field>
+        <input
+          matInput
+          name="password"
+          formControlName="password"
+          placeholder="password"
+          [type]="getPasswordType()"
+        />
+      </mat-form-field>
+      <mat-icon (click)="changePasswordVisibility()">
+        {{ getVisibleIcon() }}
+      </mat-icon>
+    </div>
+    <button
+      class="sign-in-submit"
+      mat-raised-button
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+</div>

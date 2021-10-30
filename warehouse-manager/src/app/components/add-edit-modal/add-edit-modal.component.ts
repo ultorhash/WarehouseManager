@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, Validators, FormGroup } from '@angular/forms';
+import { LoginService } from './add-edit-modal.service';
 
 @Component({
   selector: 'app-add-edit-modal',
@@ -7,9 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEditModalComponent implements OnInit {
 
-  constructor() { }
+  public signInForm: FormGroup;
+  public passwordVisibility: boolean;
+  public passwordType: string;
+
+  constructor(private fb: FormBuilder, private service: LoginService) {
+    this.signInForm = new FormGroup({});
+    this.passwordVisibility = false;
+    this.passwordType = 'password';
+  }
 
   ngOnInit(): void {
+    this.signInForm = this.fb.group({
+      login: new FormControl(),
+      password: new FormControl()
+    });
+  }
+
+  changePasswordVisibility(): void {
+    this.passwordVisibility = !this.passwordVisibility;
+  }
+
+  getPasswordType(): string {
+    return this.passwordVisibility ? 'text' : 'password';
+  }
+
+  getVisibleIcon(): string {
+    return this.passwordVisibility ? 'visibility' : 'visibility_off';
+  }
+
+  onSubmit(): void {
+    this.service.loginEmployee(this.signInForm.value);
   }
 
 }
