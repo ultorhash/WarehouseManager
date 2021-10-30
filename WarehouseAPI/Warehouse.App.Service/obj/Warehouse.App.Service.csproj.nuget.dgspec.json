@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\WarehouseManager\\api\\WarehouseAPI\\Warehouse.App.Service\\Warehouse.App.Service.csproj": {}
+    "D:\\Projects\\WarehouseManager\\WarehouseAPI\\Warehouse.App.Service\\Warehouse.App.Service.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\WarehouseManager\\api\\WarehouseAPI\\Warehouse.App.Service\\Warehouse.App.Service.csproj": {
+    "D:\\Projects\\WarehouseManager\\WarehouseAPI\\Warehouse.App.Service\\Warehouse.App.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\WarehouseManager\\api\\WarehouseAPI\\Warehouse.App.Service\\Warehouse.App.Service.csproj",
+        "projectUniqueName": "D:\\Projects\\WarehouseManager\\WarehouseAPI\\Warehouse.App.Service\\Warehouse.App.Service.csproj",
         "projectName": "Warehouse.App.Service",
-        "projectPath": "D:\\Projects\\WarehouseManager\\api\\WarehouseAPI\\Warehouse.App.Service\\Warehouse.App.Service.csproj",
+        "projectPath": "D:\\Projects\\WarehouseManager\\WarehouseAPI\\Warehouse.App.Service\\Warehouse.App.Service.csproj",
         "packagesPath": "C:\\Users\\rajsk\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\WarehouseManager\\api\\WarehouseAPI\\Warehouse.App.Service\\obj\\",
+        "outputPath": "D:\\Projects\\WarehouseManager\\WarehouseAPI\\Warehouse.App.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -46,6 +46,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
