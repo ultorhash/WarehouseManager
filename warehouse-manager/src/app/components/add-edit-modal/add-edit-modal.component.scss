@@ -1,0 +1,67 @@
+.modal-container {
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #333;
+  border-radius: 20px;
+  margin-right: 130px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 2px #bbb;
+}
+
+.modal-title {
+  width: auto;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
+
+  h1 {
+    color: orange;
+    font-size: 1.8rem;
+  }
+}
+
+.sign-in-form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-input-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  mat-icon {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+}
+
+.sign-in-submit {
+  margin-top: 30px;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #004C99;
+  color: #eee;
+
+  &:hover {
+    background-color: #0066CC;
+  }
+}
