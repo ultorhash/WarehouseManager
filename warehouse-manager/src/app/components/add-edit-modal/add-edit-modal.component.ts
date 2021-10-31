@@ -39,7 +39,7 @@ export class AddEditModalComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.service.loginEmployee(this.signInForm.value);
+    this.service.loginEmployee(this.signInForm.value).subscribe();
   }
 
 }
