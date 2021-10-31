@@ -19,8 +19,8 @@ namespace Warehouse.App.Service.Controllers
             this.repository = repository;
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Employee>> LoginAsync([FromBody] Employee data)
+        [HttpPost]    
+        public async Task<ActionResult<Employee>> LoginAsync([FromBody] EmployeeDto data)
         {
             var employee = await repository.GetEmployeeAsync(data.Login, data.Password);
             return Ok(employee);
