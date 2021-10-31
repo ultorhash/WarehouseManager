@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { LoginService } from './login.service';
 import { tap } from "rxjs/operators";
 import { IEmployee } from '../../interfaces/employee';
 import { Router } from '@angular/router';
+import { Select, Store } from '@ngxs/store';
+import { SetEmployee } from 'src/app/store/actions/employee.actions';
+import { Observable, of } from 'rxjs';
+import { EmployeeState } from '../../store/state/employee.state';
 
 @Component({
   selector: 'app-add-edit-modal',
@@ -17,7 +21,12 @@ export class LoginComponent implements OnInit {
   public passwordType: string;
   public loginError: boolean;
 
-  constructor(private fb: FormBuilder, private service: LoginService, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private service: LoginService,
+    private router: Router,
+    private store: Store
+  ) {
     this.signInForm = new FormGroup({});
     this.passwordVisibility = false;
     this.passwordType = 'password';
@@ -48,6 +57,7 @@ export class LoginComponent implements OnInit {
       this.loginError = true;
     }
     else {
+      this.store.dispatch(new SetEmployee(result));
       this.router.navigate(['/dashboard']);
     }
   }
