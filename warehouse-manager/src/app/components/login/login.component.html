@@ -1,5 +1,5 @@
-<div class="modal-container">
-  <div class="modal-title">
+<div class="form-container">
+  <div class="form-title">
     <h1>Warehouse Manager</h1>
   </div>
   <form
@@ -7,7 +7,7 @@
     class="sign-in-form"
     (ngSubmit)="onSubmit()"
   >
-    <div class="modal-input-container">
+    <div class="form-input-container">
       <mat-form-field>
         <input
           matInput
@@ -18,7 +18,7 @@
         />
       </mat-form-field>
     </div>
-    <div class="modal-input-container">
+    <div class="form-input-container">
       <mat-form-field>
         <input
           matInput
@@ -39,5 +39,10 @@
     >
       Login
     </button>
+    <div class="form-result">
+      <mat-error *ngIf="loginError">
+        <p>Invalid login or password</p>
+      </mat-error>
+    </div>
   </form>
 </div>

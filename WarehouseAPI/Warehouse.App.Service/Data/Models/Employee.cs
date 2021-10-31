@@ -16,8 +16,8 @@ namespace Warehouse.App.Service.Data.Models
         [Required]
         public string Password { get; set; }
         [Required]
-        public int RankdId { get; set; }
+        public int RankId { get; set; }
         [Required]
-        public string SubervisorId { get; set; }
+        public string SupervisorId { get; set; }
     }
 }

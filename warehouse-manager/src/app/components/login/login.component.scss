@@ -1,4 +1,4 @@
-.modal-container {
+.form-container {
   width: 350px;
   height: 400px;
   display: flex;
@@ -10,7 +10,7 @@
   box-shadow: 0 0 5px 2px #bbb;
 }
 
-.modal-title {
+.form-title {
   width: auto;
   height: 60px;
   display: flex;
@@ -33,7 +33,7 @@
   flex-direction: column;
 }
 
-.modal-input-container {
+.form-input-container {
   width: 80%;
   display: flex;
   justify-content: center;
@@ -63,5 +63,17 @@
 
   &:hover {
     background-color: #0066CC;
+  }
+}
+
+.form-result {
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-weight: bold;
   }
 }
