@@ -11,6 +11,7 @@ namespace Warehouse.App.Service.Data
 
         }
 
-        public DbSet<Employee> Employess { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Rank> Ranks { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Warehouse.App.Service.Data
 
         public async Task<Employee> GetEmployeeAsync(string login, string password)
         {
-            return await context.Employess.FirstOrDefaultAsync(e => e.Login == login && e.Password == password);
+            return await context.Employees.FirstOrDefaultAsync(e => e.Login == login && e.Password == password);
         }
     }
 }

@@ -12,7 +12,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   loginEmployee(data: IEmployee): Observable<IEmployee> {
-    return this.http.post<IEmployee>(`http://localhost:5000/login/auth`, data);
+    return this.http.post<IEmployee>(`${environment.apiURL}/login/auth`, data);
   }
 
 }
